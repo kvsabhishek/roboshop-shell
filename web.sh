@@ -16,4 +16,4 @@ if [ $USERID -ne 0 ]
 then 
     echo -e "$R ERROR :: Run as sudo user$N"
     exit 1
-if
+fi
