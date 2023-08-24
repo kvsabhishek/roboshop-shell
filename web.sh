@@ -1,11 +1,11 @@
 #! /bin/bash
 
 DATE=$(date +%F)
-LOGDIR= /tmp
-SCRIPT_NAME= $0
+LOGDIR=/tmp
+SCRIPT_NAME=$0
 LOGFILE=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
-USERID= $(id -u)
+USERID=$(id -u)
 
 R="\e[31m"
 G="\e[32m"
