@@ -26,5 +26,5 @@ fi
 
 for i in "${SCRIPT_NAME[@]}"
 do
-    echo $i
+    echo "$i"
 done
