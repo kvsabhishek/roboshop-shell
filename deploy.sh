@@ -24,7 +24,7 @@ then
     exit 1
 fi
 
-for i in $SERVERS[@]
+for i in "$SERVERS[@]"
 do
     echo "$i"
 done
