@@ -40,7 +40,7 @@ VALIDATE $? "Sarting nginx service"
 rm -rf /usr/share/nginx/html/*
 VALIDATE $? "Deleting pre defined files from nginx directory"
 
-curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip
+curl -o /tmp/web.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 VALIDATE $? "Downloading roboshop files"
 
 cd /usr/share/nginx/html
