@@ -24,7 +24,7 @@ then
     exit 1
 fi
 
-for i in "$SCRIPT_NAME[@]"
+for i in "${SCRIPT_NAME[@]}"
 do
     echo $i
 done
