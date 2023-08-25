@@ -49,9 +49,7 @@ VALIDATE $? "Changing to nginx directory"
 unzip /tmp/web.zip
 VALIDATE $? "Unzipping downloaded roboshop files"
 
-pwd
-
-cp ./roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf 
+cp /home/ec2-user/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf 
 VALIDATE $? "Configuring nginx"
 
 systemctl restart nginx 
