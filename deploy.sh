@@ -22,9 +22,9 @@ if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR ::: Dont have enough previlage to run this script$N"
     exit 1
+else
+    for i in ${SERVERS[@]}
+    do
+        echo $i
+    done
 fi
-
-for i in ${SERVERS[@]}
-do
-    echo $i
-done
