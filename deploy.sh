@@ -25,7 +25,7 @@ then
 else
     for i in ${SERVERS[@]}
     do
-        aws ec2 run-instances --image-id ami-051f7e7f6c2f40dc1 --count 1 --instance-type t2.micro --key-name Devops --security-group-ids sg-0339b8c4272635bfa --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value='${Service}'}]">> /tmp/aws.log
+        aws ec2 run-instances --image-id ami-051f7e7f6c2f40dc1 --count 1 --instance-type t2.micro --key-name Devops --security-group-ids sg-0339b8c4272635bfa --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value='${i}'}]">> /tmp/aws.log
     done
 fi
 
