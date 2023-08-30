@@ -30,3 +30,4 @@ else
 fi
 
 
+#aws ec2 describe-instances --filters "Name=tag:Name,Values=MyInstance" -----> To get the instance based on name tag
