@@ -37,15 +37,10 @@ fi
 
 
 # #aws ec2 describe-instances --filters "Name=tag:Name,Values=MyInstance" -----> To get the instance based on name tag
+
 # #!/bin/bash
-
-# # Define the instance name tag you're looking for
 # INSTANCE_NAME_TAG="YourInstanceNameTag"
-
-# # Check if an instance with the given name tag exists and is running
 # INSTANCE_INFO=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=$INSTANCE_NAME_TAG" --query "Reservations[].Instances[?State.Name == 'running'][0].{ID:InstanceId,IP:PrivateIpAddress}" --output json)
-
-# # Check if the instance info is empty, indicating no running instance with the given name tag
 # if [ -z "$INSTANCE_INFO" ]; then
 #     echo "No running instance with the name tag $INSTANCE_NAME_TAG found."
 # else
