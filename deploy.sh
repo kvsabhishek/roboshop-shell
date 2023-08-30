@@ -25,7 +25,7 @@ then
 else
     for i in ${SERVERS[@]}
     do
-        EXISTING_IP= $(aws ec2 describe-instances --filters "Name=tag:Name,Values='${i}'" "Name=instance-state-name,Values=running" | jq -r '.Reservations[0].Instances[0].PrivateIpAddress')
+        EXISTING_IP= $(aws ec2 describe-instances --filters "Name=tag:Name,Values='web'" "Name=instance-state-name,Values=running" | jq -r '.Reservations[0].Instances[0].PrivateIpAddress')
         if [ $EXISTING_IP == "" ]
         then
             aws ec2 run-instances --image-id ami-051f7e7f6c2f40dc1 --count 1 --instance-type t2.micro --key-name Devops --security-group-ids sg-0339b8c4272635bfa --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value='${i}'}]">> /tmp/aws.log
